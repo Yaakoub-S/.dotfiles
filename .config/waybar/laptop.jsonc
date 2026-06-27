@@ -1,0 +1,13 @@
+{
+  "include": ["~/.config/waybar/base.jsonc"],
+
+  // modules to show on laptops
+  "modules-right": [
+    "tray",
+    "custom/tray-sep",
+    "battery",
+    "custom/separator",
+    "pulseaudio"
+  ]
+}
+

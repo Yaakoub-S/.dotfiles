@@ -1,0 +1,46 @@
+@import url("colors.css");
+
+* {
+  font-family: "mono";
+  min-height: 0;
+  border: none;
+  border-radius: 0;
+  animation: none;
+  transition: none;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0;
+}
+
+
+window#waybar {
+  background: @bg; 
+  color: @fg;
+  animation: none;
+  transition: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#clock,
+#battery,
+#pulseaudio, 
+#tray {
+  padding: 0 3px;
+}
+
+#tags button {
+  color: @dim;
+  background: none;
+}
+
+#tags button.occupied{
+  color: @fg;
+}
+
+#tags button:hover,
+#tags button.urgent,
+#tags button.focused{
+  color: @bg;
+  background: @fg;
+}

@@ -1,0 +1,11 @@
+{
+  "include": ["~/.config/waybar/base.jsonc"],
+
+  // modules to show on desktops
+  "modules-right": [
+    "tray",
+    "custom/tray-sep",
+    "pulseaudio"
+  ]
+}
+
