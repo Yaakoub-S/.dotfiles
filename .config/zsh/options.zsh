@@ -1,28 +1,31 @@
 # vi mode
 bindkey -v
-
-zle-keymap-select() {
-  if [[ ${KEYMAP} == vicmd ]]; then
-    RPROMPT="%F{red}[N]%f"
-  else
-    RPROMPT=""
-  fi
-  zle reset-prompt
+refresh-indicator(){
+    case ${KEYMAP} in
+        vicmd) RPROMPT="%F{red}-- NORMAL --%f" ;;
+        *)     RPROMPT="" ;;
+    esac
 }
-zle -N zle-keymap-select
+refresh-indicator
 
-zle-line-init() {
-  RPROMPT=""
-  zle reset-prompt
+zle-line-init zle-keymap-select() {
+    refresh-indicator
+    zle reset-prompt
 }
 zle -N zle-line-init
+zle -N zle-keymap-select
 
-## fix old vi backspace
 bindkey '^?' backward-delete-char
 bindkey '^H' backward-delete-char
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd 'v' edit-command-line
 
 # navigation 
 setopt auto_cd 
 
 # history
+export HISTFILE="$ZDOTDIR/.zsh_history"
+export HISTSIZE=10000
+export SAVEHIST=10000
 setopt inc_append_history share_history hist_ignore_space

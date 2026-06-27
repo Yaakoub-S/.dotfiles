@@ -14,11 +14,6 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_BIN_HOME="$HOME/.local/bin"
 
-# history
-export HISTFILE="$ZDOTDIR/.zsh_history"
-export HISTSIZE=10000
-export SAVEHIST=10000
-
 # dotfiles
 export DOTFILES="$HOME/.dotfiles"
 
