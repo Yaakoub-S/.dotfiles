@@ -1,0 +1,51 @@
+configuration {
+    display-drun: "apps";
+    display-run: "run";
+    display-window: "windows";
+}
+
+* {
+    bg: #181616;
+    fg: #c5c9c5;
+    dim: #727169;
+
+    background:                  @bg;
+    foreground:                  @fg;
+    border-color:                @fg;
+    
+    normal-background:           @bg;
+    normal-foreground:           @fg;
+    
+    selected-normal-background:  @fg;
+    selected-normal-foreground:  @bg;
+
+    alternate-normal-background: @bg;
+    alternate-normal-foreground: @fg;
+
+    background-color:            transparent;
+    font:                        "mono 12";
+}
+
+window {
+    background-color: @bg;
+    width: 30%;
+}
+
+prompt {
+    text-color: @fg;
+}
+
+entry {
+    text-color:        @fg;
+    placeholder:       "";
+}
+
+listview {
+    scrollbar: false;
+    border: 0px;
+    lines: 10;
+}
+
+textbox-prompt-colon {
+    str: " ::";
+}
