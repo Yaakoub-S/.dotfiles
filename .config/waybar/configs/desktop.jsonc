@@ -1,0 +1,11 @@
+{
+    "include": [
+        "~/.config/waybar/base.jsonc"
+    ],
+    "modules-right": [
+        "tray"
+    ],
+    "modules-left": [
+        "ext/workspaces"
+    ]
+}

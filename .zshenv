@@ -5,6 +5,7 @@ export ZDOTDIR=$HOME/.config/zsh
 export EDITOR="nvim"
 export VISUAL=$EDITOR
 export PAGER="less"
+export MANPAGER="nvim +Man!"
 export LANG="en_US.UTF-8"
 
 # xdg

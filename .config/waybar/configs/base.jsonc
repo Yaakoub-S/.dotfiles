@@ -1,0 +1,23 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "spacing": 0,
+
+    "battery": {
+        "tooltip": false,
+        "format": "{capacity}",
+        "format-charging": "{capacity}·",
+        "full-at": 80,
+        "states": {
+            "critical": 15
+        },
+        "events": {
+            "on-discharging-critical": "notify-send -u critical 'Battery low'"
+        }
+    },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+}
