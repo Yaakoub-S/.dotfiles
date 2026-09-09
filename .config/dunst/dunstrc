@@ -1,0 +1,27 @@
+[global]
+origin = top-center
+offset = (0, 20)
+font = "Monospace Bold 12"
+background = "#16161e"
+foreground = "#a9b1d6"
+corner_radius = 10
+frame_width = 0
+show_age_threshold = -1
+gap_size = 4
+
+enable_recursive_icon_lookup = true
+icon_theme = "Papirus-Dark"
+icon_position = left
+format = "<b>%s</b>\n%b"
+
+[urgency_low]
+timeout = 4
+default_icon = "dialog-information"
+
+[urgency_normal]
+timeout = 6
+default_icon = "dialog-question"
+
+[urgency_critical]
+timeout = 0
+default_icon = "dialog-warning"
