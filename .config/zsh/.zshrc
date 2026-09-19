@@ -3,7 +3,8 @@ autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%F{magenta}(%b)%f '
 setopt prompt_subst
-PROMPT='%F{blue}%~%f ${vcs_info_msg_0_}$ '
+PROMPT='%F{cyan}%m%f %F{blue}%~%f ${vcs_info_msg_0_}
+%(?.%F{green}$.%F{red}$)%f '
 
 # sourcing files 
 [[ -f "$ZDOTDIR/aliases.zsh" ]] && . "$ZDOTDIR/aliases.zsh"
