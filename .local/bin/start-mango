@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# qt
+export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_WAYLAND_DISABLE_WINDOWDECORATIONS=1
+
+# gtk
+export GTK_BACKEND=wayland
+export GTK2_RC_FILES=/home/yaakoub/.config/gtk-2.0/gtkrc
+export GTK_USE_PORTAL=1
+
+# firefox
+export MOZ_ENABLE_WAYLAND=1
+
+# electron
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+
+# foot
+export TERMINAL=footclient
+
+# wlr
+export WLR_RENDERER=vulkan
+
+exec mango
