@@ -1,5 +1,4 @@
-# Start MangoWM as a UWSM-managed session from the login TTY.
-# The guard prevents accidental startup from an existing graphical session.
-if [[ -z ${WAYLAND_DISPLAY:-} ]] && command -v uwsm >/dev/null 2>&1 && uwsm check may-start 1; then
-    exec uwsm start -- mango.desktop
+# start compositor
+if [ -z "$WAYLAND_DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ] ; then
+    exec start-mango
 fi
