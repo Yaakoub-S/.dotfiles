@@ -2,11 +2,23 @@
     "layer": "top",
     "position": "top",
     "modules-right": [
+        "battery",
         "tray"
     ],
     "modules-left": [
         "ext/workspaces"
     ],
+    "battery": {
+        "tooltip": false,
+        "format": "{capacity}",
+        "format-charging": "{capacity}·",
+        "states": {
+            "critical": 15
+        },
+        "events": {
+            "on-discharging-critical": "notify-send -u critical 'Battery low'"
+        }
+    },
     "tray": {
         "icon-size": 21,
         "spacing": 10
