@@ -1,0 +1,14 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-right": [
+        "tray"
+    ],
+    "modules-left": [
+        "ext/workspaces"
+    ],
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+}
