@@ -7,6 +7,7 @@ PROMPT='%F{cyan}%m%f %F{blue}%~%f ${vcs_info_msg_0_}
 %(?.%F{green}$.%F{red}$)%f '
 
 # sourcing files 
+[[ -f "$ZDOTDIR/env.zsh" ]] && . "$ZDOTDIR/env.zsh"
 [[ -f "$ZDOTDIR/aliases.zsh" ]] && . "$ZDOTDIR/aliases.zsh"
 [[ -f "$ZDOTDIR/options.zsh" ]] && . "$ZDOTDIR/options.zsh"
 [[ -f "$ZDOTDIR/completions.zsh" ]] && . "$ZDOTDIR/completions.zsh"
